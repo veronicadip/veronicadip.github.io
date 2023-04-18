@@ -1,120 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Veronica Dip</title>
-  </head>
-  <body>
-    <style>
-      body {
-        background-color: rgb(250, 244, 242);
-      }
-      .container {
-        max-width: 500px;
-        margin: 50px auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .profilePicture {
-        border-radius: 50%;
-        width: 240px;
-        margin-top: 30px;
-      }
-      h1 {
-        margin-top: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      p {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .presentation {
-        padding: 0 40px 10px 40px;
-        border-bottom-color: rgb(230, 230, 230);
-        border-bottom-style: inset;
-      }
-      .icons {
-        display: flex;
-        flex-direction: row;
-        padding: 0px;
-        border-color: #f4f2f2;
-        border-style: solid;
-        transition: box-shadow 1s;
-        margin-top: 30px;
-      }
-      .icons:hover {
-        box-shadow: -8px 9px 10px -6px rgba(148, 148, 148, 0.75);
-        -webkit-box-shadow: -8px 9px 10px -6px rgba(148, 148, 148, 0.75);
-        -moz-box-shadow: -8px 9px 10px -6px rgba(148, 148, 148, 0.75);
-      }
-      .linkedinLogo,
-      .githubLogo,
-      .gmailLogo,
-      .twitterLogo,
-      .CVLogo {
-        width: 36px;
-        margin: 10px;
-      }
-    </style>
-    <div class="container">
-      <img
-        src="https://avatars.githubusercontent.com/u/98916486?v=4"
-        alt="picture of myself"
-        class="profilePicture"
-      />
-      <h1>Hi, I'm Veronica.</h1>
-      <div class="presentation">
-        <p>I love coding and learning more. Now I'm looking for opportunities to collaborate and make awesome things.</p>
-        <p>
-          I have experience with JavaScript, TypeScript, React.js, HTML, CSS, Bootstrap, Git and Trello. Now I'm doing a Fullstack Bootcamp to expand my knowledge of Frontend development and learn not only Backend, but to work with a team and frameworks for project management like Scrum.
-        </p>
-      </div>
-      <ul style="list-style-type: none" class="icons">
-        <li>
-          <a href="https://www.linkedin.com/in/veronica-dip/">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/61/61109.png"
-              alt="link to LinkedIn"
-              class="linkedinLogo"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/veronicadip/">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-              alt="link to Github"
-              class="githubLogo"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="/Dip-Veronica-CV.pdf">
-            <img
-              src="http://cdn.onlinewebfonts.com/svg/img_571173.png"
-              alt="download my curriculum vitae"
-              class="CVLogo"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="mailto:dipmveronica@gmail.com">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/732/732026.png?w=360"
-              alt="link to Gmail"
-              class="gmailLogo"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/mveronicadip">
-            <img
-              src="https://seeklogo.com/images/T/twitter-icon-circle-black-logo-35827D553B-seeklogo.com.png"
-              alt="link to Twitter"
-              class="twitterLogo"
-            />
-          </a>
-        </li>
-      </ul>
+
+<head>
+  <title>Veronica Dip</title>
+</head>
+
+<body>
+  <style>
+    body {
+      background-color: rgb(250, 244, 242);
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profilePicture {
+      border-radius: 50%;
+      width: 240px;
+      margin-top: 30px;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .presentation {
+      padding: 0 40px 10px 40px;
+      border-bottom-color: rgb(230, 230, 230);
+      border-bottom-style: inset;
+    }
+
+    .icons {
+      display: flex;
+      flex-direction: row;
+      padding: 0px;
+      border-color: #f4f2f2;
+      border-style: solid;
+      transition: box-shadow 1s;
+      margin-top: 30px;
+    }
+
+    .icons:hover {
+      box-shadow: -8px 9px 10px -6px rgba(148, 148, 148, 0.75);
+      -webkit-box-shadow: -8px 9px 10px -6px rgba(148, 148, 148, 0.75);
+      -moz-box-shadow: -8px 9px 10px -6px rgba(148, 148, 148, 0.75);
+    }
+
+    .linkedinLogo,
+    .githubLogo,
+    .gmailLogo,
+    .twitterLogo,
+    .CVLogo {
+      width: 36px;
+      margin: 10px;
+    }
+  </style>
+  <div class="container">
+    <img src="./assets/profile-pic.jpeg" alt="picture of myself" class="profilePicture" />
+    <h1>Hi, I'm Veronica.</h1>
+    <div class="presentation">
+      <p>I love coding and learning more. Now I'm looking for opportunities to collaborate and make awesome things.</p>
+      <p>
+        I have experience with JavaScript, TypeScript, React.js, HTML, CSS, Bootstrap, Git and Trello. Now I'm doing a Fullstack
+        Bootcamp to expand my knowledge of Frontend development and learn not only Backend, but to work with a team and frameworks
+        for project management like Scrum.
+      </p>
     </div>
-  </body>
+    <ul style="list-style-type: none" class="icons">
+      <li>
+        <a href="https://www.linkedin.com/in/veronica-dip/">
+          <img src="./assets/linkedin-logo.png" alt="LinkedIn logo" class="linkedinLogo" />
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/veronicadip/">
+          <img src="./assets/github-logo.png" alt="GitHub Logo" class="githubLogo" />
+        </a>
+      </li>
+      <li>
+        <a href="/Dip-Veronica-CV.pdf">
+          <img src="./assets/resume.png" alt="Drawing of a resume" class="CVLogo" />
+        </a>
+      </li>
+      <li>
+        <a href="mailto:dipmveronica@gmail.com">
+          <img src="./assets/gmail-logo.png" alt="Gmail logo" class="gmailLogo" />
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/mveronicadip">
+          <img src="./assets/twitter-logo.png" alt="Twitter logo" class="twitterLogo" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>
