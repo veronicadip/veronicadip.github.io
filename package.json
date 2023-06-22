@@ -1,0 +1,28 @@
+{
+  "name": "veronicadip.github.io",
+  "version": "1.0.0",
+  "description": "veronica dip's personal website",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veronicadip/veronicadip.github.io.git"
+  },
+  "keywords": [
+    "website",
+    "veronicadip",
+    "blog"
+  ],
+  "author": "Veronica Dip <dipmveronica@gmail.com> (https://veronicadip.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/veronicadip/veronicadip.github.io/issues"
+  },
+  "homepage": "https://github.com/veronicadip/veronicadip.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+  }
+}
