@@ -1,53 +1,73 @@
 # My experience making a pull request to an open source project
 
+While making my first pull request to a real project, I had to learn a lot, from setting up the project to new concepts of JavaScript and TypeScript.
+
 ## JavaScript functions can be used like React classes
 
-const Dog = function(name) {
-console.log("function called")
+We know that in JavaScript, classes don't exist, but I didn't know that functions have a lot in commmon with them. At the end, the computer compiles the class from React as a JavaScript function.
 
-        const barf = function() {
-                console.log(`bafg! I'm ${name}`)
+The fact that surprised me the most, is that you can make a `new` instance of a function, passing it values for it to use.
+
+In conclusion, is the same doing this:
+
+```js
+class Person {
+        constructor(name) {
+                this.name = name
         }
+        greeting() {
+                console.log(`Hi! my name is ${name}`)
+        }
+};
 
+const John = new Person("John")
+```
+
+And doing this:
+
+```js
+const Person = function(name) {
+        const greeting = function() {
+                console.log(`Hi! my name is ${name}`)
+        }
         return {
                 name: name,
-                barf: barf,
+                greeting: greeting
         }
+};
 
-}
+const John = new Person("name")
+```
 
-// returns object with keys name and barf with its respective values
+## Make declarations in TypeScript using .d.ts
 
-class Dog {
-initialize(name) {
-this.name = name
-}
+My contribution was migrating some JavaScript files to TypeScript, so at one point I needed to make a type declaration of functions of a library. To do that, I needed to create a `.d.ts` file.
 
-      barf() {
+These files contain only type information (for typechecking), this means that these don't produce any `.js` outputs.
 
-}
+## Usually node_modules folders are git ignored
 
-const puki = new Dog("puki")
-console.log(puki)
-console.log(puki.barf())
+The folder `node_modules` is created by `npm` or `yarn` and it contains all the packages installed locally from `packages.json`. 
 
-the class is a sugar code for the js function
+This folder is usually set to be ignored by git, so, if you need to add a `d.ts` for another file that is in `node_modules`, you'll need to put that new file in a directory that isn't affected by `.gitignore` (because you'll want to commit that change).
 
-## make declarations in ts (file.d.ts)
+## You can convert any value to the corresponding boolean primitive
 
-## while making a declaration, you can only use types
+You can convert any value to a Boolean primitive one using the `Boolean()` constructor. This is specially useful when you need a function to return a strictly boolean value but it returns `truthy` or `falsy`.
 
-interface is also a type
+You can use it like this:
 
-## usually node_modules folders are git ignored
+```js
+Boolean("Your value");
+```
 
-if you change something about the modules, it needs to be outside that ignored folder
+You can do the same using the double NOT (`!!`):
 
-## you can convert something to a boolean value using Boolean("example")
+```js
+!!"Your value"
+```
 
-it can also work using !!("example"), the first exclamation to convert the content to boolean, and the second to undo the first "not" (the first one reverts the correct value while converting, the second one makes it return the right boolean value)
-
-## tell ts what's inside an array
+## Tell TypeScript what's inside an array
 
 interface ObjectsExample {
 ...
@@ -74,6 +94,9 @@ type MyFunction ...
 
 }
 
-# ts interfaces
+## ts interfaces
 
 interface, type, declare
+
+
+## ! at the end: you are sure that value is not undefined
