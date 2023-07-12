@@ -67,36 +67,22 @@ You can do the same using the double NOT (`!!`):
 !!"Your value"
 ```
 
-## Tell TypeScript what's inside an array
+## Indicating React that your prop isn't undefined
 
-interface ObjectsExample {
-...
+When you are passing a prop that might be undefined but you are sure that it have a value, you can add an exclamation symbol (!) at the end:
+
+```js
+const myFunction = function(myProp) {
+        return (
+                <div>
+                <MyComponent neededProp={myProp!} />
+                </div>
+        )
 }
+```
 
-const arrayExample: ObjectsExample[] = [
-{
-...
-},
-{
-...
-}
-]
+## Conclusion
 
-## manage modules
+I've learned a lot by just making one pull request, from reading someone else's code to new concepts of languages that I was used to use alone.
 
-declare module "example" {
-interface MyObject {
-..
-}
-type MyFunction ...
-
-    export {MyObject, MyFunction}
-
-}
-
-## ts interfaces
-
-interface, type, declare
-
-
-## ! at the end: you are sure that value is not undefined
+My conclusion is that, when you feel that you aren't learning so much from your solo projects, this is a great way to learn and practice new concepts.
